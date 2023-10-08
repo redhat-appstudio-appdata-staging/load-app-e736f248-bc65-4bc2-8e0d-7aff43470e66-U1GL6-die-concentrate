@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-go-basic-thti
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-go-basic-thti
+    app.kubernetes.io/part-of: load-app-e736f248-bc65-4bc2-8e0d-7aff43470e66
+  name: devfile-sample-go-basic-tsjdm
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: devfile-sample-go-basic-thti
+    weight: null
+status: {}
